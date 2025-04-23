@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="favicon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <meta name="description" content="Rdap, as a developer. Expert in Discord and Shopify, frontend developer using React, Angular, Sass and JavaScript.">
+    <meta name="keywords" content="Rdap is a Developer. - React, Angular, Sass, JavaScript, Node.js, Shopify, Discord.">
+    
+    <meta name="author" content="rdaphq">
+    <meta name="publisher" content="rdaphq">
+    <meta name="generator" content="rdaphq">
+    <meta name="developer" content="rdaphq">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Rdap Is A Dev. - React, Angular, Sass, JavaScript, Node.js, Shopify, Discord.</title>
+</head>
+<body>
+    <!-- MODALS -->
+    <div class="hire">
+        <div class="hire-modal">
+            <!--  -->
+        </div>
+    </div>
+    <!-- END MODALS -->
+
+    <nav class="navbar sticky top-[0] flex items-center justify-center z-100">
+        <div class="navbar-links">
+            <a href="#projects">Projects</a>
+            <a href="/github">Github</a>
+            <a href="/discord">Discord</a>
+        </div>
+
+        <div class="navbar-logo">
+            <img src="https://rdaphq.com/assets/logo.png" alt="Rdap Logo">
+        </div>
+
+        <div class="navbar-links">
+            <a href="javascript:void()">Hire</a>
+            <a href="javascript:void()">Socials</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container max-w-[1100px] mx-auto">
+        <main>
+            <div class="hero min-h-120 flex items-center justify-center">
+                <div class="hero-bg-point"></div>
+
+                <div class="hero-text">
+                    <p class="text-gray-400 text-[.6rem] relative bottom-[1rem] uppercase ">Just look at this website</p>
+                    <h2 class="text-white text-7xl tracking-tighter text-balance font-bold"><span class="text-red-500">Rdap</span> is a frontend developer and a designer.</h2>
+                    <a id="explore" class="text-red-500 relative top-[1rem] hover:text-white" href="javascript:void()">Explore -></a>
+                </div>
+
+                <div class="hero-image">
+                    <img class="w-200" src="assets/rdapsnake.png" alt="Rdap Snake">
+                </div>
+            </div>
+
+
+            <div id="start" class="knowledge">
+                <h2 class="text-white text-4xl tracking-tighter">Knowledge</h2>
+                <div class="knowledge-container flex justify-space-between gap-10">
+                    <div class="knowledge-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        <p>JavaScript</p>
+                    </div>
+
+                    <div class="knowledge-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        <p>React</p>
+                    </div>
+
+                    <div class="knowledge-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="React">
+                        <p>Angular</p>
+                    </div>
+
+                    <div class="knowledge-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                        <p>Node.js</p>
+                    </div>
+
+                    <div class="knowledge-bg-point"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const exploreButton = document.getElementById("explore");
+        const view = document.getElementById("start");
+
+        exploreButton.addEventListener("click", () => {
+            scrollTo({ top: view.offsetTop - 20, behavior: "smooth" });
+        })
+    </script>
+</body>
+</html>

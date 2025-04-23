@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// IMPORTS
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Climate+Crisis&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Dela+Gothic+One&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Questrial&family=Space+Grotesk:wght@300..700&family=Special+Gothic+Expanded+One&family=Syne:wght@400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+// END IMPORTS
+
+
+// FONTS
+$inter: "Inter", serif;
+$geist: "Geist", sans-serif;
+$boldonse: "Boldonse", system-ui;
+// END FONTS
+
+
+// COLORS
+$bl: #111;
+$wh: #eee;
+$sg: #999;
+$pr: #ff4040;
+$bg: #0e0606;
+$sb: #080808;
+$dg: #ffffff30;
+// END COLORS
+
+// MIXIN BG POINT
+@mixin bgPoint {
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background-color: $pr;
+    position: relative;
+    z-index: -10;
+
+    box-shadow: 0 0 100px 90px $pr;
+    filter: blur(70px);
+}
+// BG POINT
+
+::selection {
+    background-color: $pr;
+    color: $bl;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: $geist;
+    background-color: $bg;
+    color: $wh;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.navbar {
+    gap: 3rem;
+    padding: .8rem 0;
+    background-color: #00000050;
+    border-bottom: 1px solid $dg;
+    backdrop-filter: blur(10px);
+
+    &-logo {
+        width: 50px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-links {
+        gap: 3rem;
+        display: flex;
+
+        a {
+            transition: all .2s ease;
+            text-decoration: none;
+            font-size: .8rem;
+            color: $sg;
+
+            &:hover {
+                color: $wh;
+            }
+        }
+    }
+}
+
+.hero {
+    &-text {
+        font-family: $inter;
+    }
+
+    &-image {
+        img {
+            user-select: none;
+        }
+    }
+
+    &-bg-point {
+        @include bgPoint;
+        filter: blur(80px);
+        bottom: 50px;
+        left: 80px;
+    }
+}
+
+.knowledge {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    
+    &-item {
+        width: 180px;
+        height: fit-content;
+
+        gap: .5rem;
+        padding: 1rem;
+        display: flex;
+        background-color: #ffffff09;
+        flex-direction: column;
+        border: 2px solid $dg;
+        border-radius: .8rem;
+        overflow: hidden;
+
+        transition: all .3s ease-in-out;
+
+        img {
+            width: 32px;
+            border-radius: 4px;
+        }
+
+        &:hover {
+            border-color: $pr;
+            background-color: #ff9b9b11;
+            backdrop-filter: blur(10px);
+        }
+    }
+
+    &-bg-point {
+        @include bgPoint;
+        filter: blur(100px);
+        top: 160px;
+    }
+}

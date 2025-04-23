@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Climate+Crisis&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Dela+Gothic+One&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Questrial&family=Space+Grotesk:wght@300..700&family=Special+Gothic+Expanded+One&family=Syne:wght@400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #ff4040;
+  color: #111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Geist", sans-serif;
+  background-color: #0e0606;
+  color: #eee;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navbar {
+  gap: 3rem;
+  padding: 0.8rem 0;
+  background-color: rgba(0, 0, 0, 0.3137254902);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1882352941);
+  backdrop-filter: blur(10px);
+}
+.navbar-logo {
+  width: 50px;
+}
+.navbar-logo img {
+  width: 100%;
+}
+.navbar-links {
+  gap: 3rem;
+  display: flex;
+}
+.navbar-links a {
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #999;
+}
+.navbar-links a:hover {
+  color: #eee;
+}
+
+.hero-text {
+  font-family: "Inter", serif;
+}
+.hero-image img {
+  user-select: none;
+}
+.hero-bg-point {
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background-color: #ff4040;
+  position: relative;
+  z-index: -10;
+  box-shadow: 0 0 100px 90px #ff4040;
+  filter: blur(70px);
+  filter: blur(80px);
+  bottom: 50px;
+  left: 80px;
+}
+
+.knowledge {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+  align-items: center;
+  justify-content: center;
+}
+.knowledge-item {
+  width: 180px;
+  height: fit-content;
+  gap: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.0352941176);
+  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.1882352941);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.knowledge-item img {
+  width: 32px;
+  border-radius: 4px;
+}
+.knowledge-item:hover {
+  border-color: #ff4040;
+  background-color: rgba(255, 155, 155, 0.0666666667);
+  backdrop-filter: blur(10px);
+}
+.knowledge-bg-point {
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background-color: #ff4040;
+  position: relative;
+  z-index: -10;
+  box-shadow: 0 0 100px 90px #ff4040;
+  filter: blur(70px);
+  filter: blur(100px);
+  top: 160px;
+}
+
+/*# sourceMappingURL=style.css.map */
