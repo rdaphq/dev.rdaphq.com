@@ -6,6 +6,7 @@
 
 // IMPORTS
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Climate+Crisis&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Dela+Gothic+One&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Questrial&family=Space+Grotesk:wght@300..700&family=Special+Gothic+Expanded+One&family=Syne:wght@400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
 // END IMPORTS
 
 
@@ -118,9 +119,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem 0;
-    align-items: center;
-    justify-content: center;
+    padding: 6rem 0;
     
     &-item {
         width: 180px;
@@ -154,4 +153,70 @@ body {
         filter: blur(100px);
         top: 160px;
     }
+}
+
+.projects {    
+    padding: 6rem 0;
+
+    &-container {
+        margin-top: 2rem;
+    }
+}
+
+// background:
+//         linear-gradient(-90deg, rgba(0,0,0,.05) 1px, transparent 1px),
+//         linear-gradient(rgba(0,0,0,.05) 1px, transparent 1px), 
+//         linear-gradient(-90deg, rgba(0, 0, 0, .04) 1px, transparent 1px),
+//         linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+//         linear-gradient(transparent 3px, #f2f2f2 3px, #f2f2f2 78px, transparent 78px),
+//         linear-gradient(-90deg, #aaa 1px, transparent 1px),
+//         linear-gradient(-90deg, transparent 3px, #f2f2f2 3px, #f2f2f2 78px, transparent 78px),
+//         linear-gradient(#aaa 1px, transparent 1px),
+//         #f2f2f2;
+//     background-size:
+//         10px 10px,
+//         10px 10px,
+//         80px 80px,
+//         80px 80px,
+//         80px 80px,
+//         80px 80px,
+//         80px 80px,
+//         80px 80px;
+
+.project {
+    width: 380px;
+    height: fit-content;
+    border-radius: .5rem;
+    background-color: #ffffff05;
+
+    &-data {
+        padding: 1rem;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.footer {
+    padding: 0 2rem;
+
+    a, i {
+        color: $wh;
+        transition: all .2s ease;
+
+        &:hover {
+            color: $pr;
+        }
+    }
+}
+
+.section-title {
+    font-family: $inter;
+    font-weight: 600;
+    color: transparent;
+    background: #fafafa;
+    background: linear-gradient(180deg, #fafafa 70%, #ff8080 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
 }
