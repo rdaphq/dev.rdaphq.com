@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="scrollLoad">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,11 +20,21 @@
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
 
+    <link rel="icon" href="assets/iso.png" type="image/x-icon">
+    <link rel="icon" href="assets/iso.png" type="image/x-icon">
+    <link rel="icon" href="assets/iso.png" type="image/x-icon">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <title>Rdap Is A Dev. - React, Angular, Sass, JavaScript, Node.js, Shopify, Discord.</title>
 </head>
 <body>
+    <div id="splash" class="splash unBlur">
+        <div class="splash-image animate-pulse">
+            <img src="https://rdaphq.com/assets/logo.png" alt="Rdap Logo">
+        </div>
+    </div>
+
     <!-- MODALS -->
     <div class="hire">
         <div class="hire-modal">
@@ -41,7 +51,8 @@
         </div>
 
         <div class="navbar-logo">
-            <img src="https://rdaphq.com/assets/logo.png" alt="Rdap Logo">
+            <!-- <img src="https://rdaphq.com/assets/logo.png" alt="Rdap Logo"> -->
+            <a href="/"><img src="assets/iso.png" alt="Rdap Iso"></a>
         </div>
 
         <div class="navbar-links">
@@ -54,15 +65,15 @@
     <div class="container max-w-[1100px] mx-auto">
         <main>
             <div class="hero min-h-120 flex items-center justify-center">
-                <div class="hero-bg-point"></div>
+                <div class="hero-bg-point slideView"></div>
 
-                <div class="hero-text">
+                <div class="hero-text slideView">
                     <p class="text-gray-400 text-[.6rem] relative bottom-[1rem] uppercase ">Just look at this website</p>
-                    <h1 class="text-white text-7xl tracking-tighter text-balance font-bold"><span class="text-red-500">Rdap</span> is a frontend developer and a designer.</h1>
-                    <a id="explore" class="text-red-500 relative top-[1rem] hover:text-white" href="javascript:void()">Explore -></a>
+                    <h1 class="text-white text-7xl tracking-tighter text-balance font-bold"><span class="text-red-500">Rdap</span> is a frontend developer and designer.</h1>
+                    <a id="explore" class="explore text-red-500 relative top-[1rem] hover:text-white" href="javascript:void()">Explore <span>---></span></a>
                 </div>
 
-                <div class="hero-image">
+                <div class="hero-image slideView">
                     <img class="w-200" src="assets/rdapsnake.png" alt="Rdap Snake">
                 </div>
             </div>
@@ -70,7 +81,8 @@
 
             <div id="start" class="knowledge">
                 <h2 class="text-white text-4xl tracking-tighter section-title">Knowledge</h2>
-                <div class="knowledge-container flex justify-between gap-10">
+
+                <div class="knowledge-container gap-4 slideView">
                     <div class="knowledge-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
                         <p>JavaScript</p>
@@ -82,7 +94,12 @@
                     </div>
 
                     <div class="knowledge-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="React">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass">
+                        <p>Sass</p>
+                    </div>
+
+                    <div class="knowledge-item">
+                        <img src="assets/angular.png" alt="Angular">
                         <p>Angular</p>
                     </div>
 
@@ -92,8 +109,8 @@
                     </div>
 
                     <div class="knowledge-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Node.js">
-                        <p>Tailwind</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind">
+                        <p>Tailwind CSS</p>
                     </div>
 
                     <div class="knowledge-bg-point"></div>
@@ -102,38 +119,65 @@
 
             <div id="projects" class="projects">
                 <h2 class="text-white text-4xl tracking-tighter section-title">Projects</h2>
-                <div class="projects-container flex gap-2">
+
+                <div class="projects-bg-point"></div>
+
+                <div class="projects-container flex gap-3">
                     <div class="project">
-                        <div class="project-data">
-                            <h3 class="text-white text-2xl tracking-tighter">Hexa</h3>
-                            <p class="text-gray-400">A powerful Discord multipurpose bot using discord.js</p>
-                            <a href="/projects/hexa" class="text-red-500 hover:text-white">View Project</a>
-                        </div>
                         <div class="project-image">
-                            <img src="" alt="">
+                            <a href="/projects/hexa"><img src="assets/hexa.png" alt="Hexa"></a>
+                        </div>
+                        <div class="project-data">
+                            <div class="data-container">
+                                <h3 class="text-white text-2xl tracking-tighter">Hexa</h3>
+                                <p class="text-gray-400">A powerful multipurpose bot for Discord using discord.js</p>
+                            </div>
+                        </div>
+                        <div class="project-go">
+                            <a href="/projects/hexa" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
                         </div>
                     </div>
 
                     <div class="project">
-                        <div class="project-data">
-                            <h3 class="text-white text-2xl tracking-tighter">Quikie</h3>
-                            <p class="text-gray-400">A library to create landing pages easily using native HTML and CSS.</p>
-                            <a href="/projects/quikie" class="text-red-500 hover:text-white">View Project</a>
-                        </div>
                         <div class="project-image">
-                            <img src="" alt="">
+                            <a href="/projects/quikie"><img src="assets/quikie.png" alt="Quikie CSS"></a>
+                        </div>
+                        <div class="project-data">
+                            <div class="data-container">
+                                <h3 class="text-white text-2xl tracking-tighter">Quikie</h3>
+                                <p class="text-gray-400">A library to create landing pages easily using native HTML and CSS.</p>
+                            </div>
+                        </div>
+                        <div class="project-go">
+                            <a href="/projects/quikie" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
                         </div>
                     </div>
 
                     <div class="project">
-                        <div class="project-data">
-                            <h3 class="text-white text-2xl tracking-tighter">EzModals</h3>
-                            <p class="text-gray-400">A library to add pre-built modals to websites using HTML and JavaScript in seconds.</p>
-                            <a href="/projects/ezmodals" class="text-red-500 hover:text-white">View Project</a>
-                        </div>
                         <div class="project-image">
-                            <img src="" alt="">
+                            <a href="/projects/ezmodals"><img src="assets/ezmodals.png" alt="EzModals"></a>
                         </div>
+                        <div class="project-data">
+                            <div class="data-container">
+                                <h3 class="text-white text-2xl tracking-tighter">EzModals</h3>
+                                <p class="text-gray-400">A library to add pre-built modals to websites HTML classes only.</p>
+                            </div>
+                        </div>
+                        <div class="project-go">
+                            <a href="/projects/ezmodals" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="socials flex justify-center">
+                <div class="socials-box">
+                    <h2 class="text-white text-4xl tracking-tighter section-title">Socials</h2>
+                    <div class="socials-container flex gap-5">
+                        <a href="https://rdaphq.com/github" class="socials-item" target="_blank"><i class="fi fi-brands-github"></i></a>
+                        <a href="https://rdaphq.com/discord" class="socials-item" target="_blank"><i class="fi fi-brands-discord"></i></a>
+                        <a href="https://rdaphq.com/instagram" class="socials-item" target="_blank"><i class="fi fi-brands-instagram"></i></a>
+                        <a href="https://rdaphq.com/twitter" class="socials-item" target="_blank"><i class="fi fi-brands-x"></i></a>
                     </div>
                 </div>
             </div>
@@ -168,6 +212,30 @@
         const year = new Date().getFullYear();
         const copyright = document.getElementById("copyright");
         copyright.innerHTML = `&copy; ${year} Rdap. All rights reserved.`;
+    </script>
+
+    <script>
+        const splash = document.getElementById('splash');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                if (splash.style.display === 'none') {
+                    console.log('Splash screen has been hidden.');
+                } else {
+                    splash.style.display = "none";
+                    console.log('Splash screen has been hidden.');
+                }
+            }, 3000);
+        })
+
+        // SCROLL ENABLING
+        const pageScroll = document.getElementById('scrollLoad');
+
+        pageScroll.style.overflow = 'hidden';
+
+        setTimeout(() => {
+            pageScroll = pageScroll.style.overflow = 'auto';
+        }, 3000);
     </script>
 </body>
 </html>

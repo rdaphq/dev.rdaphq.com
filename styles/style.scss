@@ -1,3 +1,5 @@
+@use 'animations';
+
 * {
     margin: 0;
     padding: 0;
@@ -58,10 +60,36 @@ body {
     color: $wh;
 }
 
+.splash {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // display: none;
+
+    img {
+        width: 80px;
+    }
+}
+
 .container {
     width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
 
+    .section-title {
+        font-family: $inter;
+        font-weight: 600;
+        color: transparent;
+        background: #fafafa;
+        background: linear-gradient(180deg, #fafafa 70%, #ff8080 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
 }
 
 .navbar {
@@ -72,7 +100,7 @@ body {
     backdrop-filter: blur(10px);
 
     &-logo {
-        width: 50px;
+        width: 30px;
 
         img {
             width: 100%;
@@ -97,6 +125,17 @@ body {
 }
 
 .hero {
+    .explore {
+        width: fit-content;
+        padding: .5rem 0;
+        display: flex;
+        transition: all .3s ease-in-out;
+        gap: 1rem;
+
+        &:hover {
+            gap: 2rem;
+        }
+    }
     &-text {
         font-family: $inter;
     }
@@ -120,10 +159,19 @@ body {
     flex-direction: column;
     gap: 2rem;
     padding: 6rem 0;
+
+    width: 100%;
+
+    &-container {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     
     &-item {
-        width: 180px;
-        height: fit-content;
+        width: 100%;
 
         gap: .5rem;
         padding: 1rem;
@@ -134,7 +182,7 @@ body {
         border-radius: .8rem;
         overflow: hidden;
 
-        transition: all .3s ease-in-out;
+        transition: all .2s ease-in-out;
 
         img {
             width: 32px;
@@ -150,51 +198,106 @@ body {
 
     &-bg-point {
         @include bgPoint;
-        filter: blur(100px);
-        top: 160px;
+        filter: blur(120px);
+        top: 140px;
     }
 }
 
-.projects {    
-    padding: 6rem 0;
+.projects {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 0;
 
     &-container {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &-bg-point {
+        @include bgPoint;
+        filter: blur(100px);
+        left: 440px;
+        top: 260px;
     }
 }
 
-// background:
-//         linear-gradient(-90deg, rgba(0,0,0,.05) 1px, transparent 1px),
-//         linear-gradient(rgba(0,0,0,.05) 1px, transparent 1px), 
-//         linear-gradient(-90deg, rgba(0, 0, 0, .04) 1px, transparent 1px),
-//         linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
-//         linear-gradient(transparent 3px, #f2f2f2 3px, #f2f2f2 78px, transparent 78px),
-//         linear-gradient(-90deg, #aaa 1px, transparent 1px),
-//         linear-gradient(-90deg, transparent 3px, #f2f2f2 3px, #f2f2f2 78px, transparent 78px),
-//         linear-gradient(#aaa 1px, transparent 1px),
-//         #f2f2f2;
-//     background-size:
-//         10px 10px,
-//         10px 10px,
-//         80px 80px,
-//         80px 80px,
-//         80px 80px,
-//         80px 80px,
-//         80px 80px,
-//         80px 80px;
-
 .project {
-    width: 380px;
-    height: fit-content;
-    border-radius: .5rem;
-    background-color: #ffffff05;
-
+    width: 320px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff08;
+    position: relative;
+    
     &-data {
-        padding: 1rem;
+        padding: 1.5rem;
         display: flex;
-        align-items: start;
-        justify-content: center;
+        align-items: center;
         flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .data-container {
+        position: relative;
+    }
+
+    &-go {
+        padding: 1rem 1rem;
+
+        a {
+            transition: all .2s ease-in-out;
+            width: fit-content;
+            display: flex;
+            gap: 1rem;
+
+            &:hover {
+                gap: 2rem;
+            }
+        }
+    }
+
+    &-image {
+        width: 100%;
+
+        img {
+            width: 100%;
+            transition: all .2s ease-in-out;
+        }
+    }
+}
+
+.socials {
+    padding: 6rem 0;
+
+    h2 {
+        padding: .5rem;
+    }
+
+    &-box {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 3rem;
+    
+        border: 2px solid #ffffff40;
+        border-radius: 4rem;
+    }
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        a {
+            top: 4px;
+            position: relative;
+            font-size: 2rem;
+        }
     }
 }
 
@@ -209,14 +312,4 @@ body {
             color: $pr;
         }
     }
-}
-
-.section-title {
-    font-family: $inter;
-    font-weight: 600;
-    color: transparent;
-    background: #fafafa;
-    background: linear-gradient(180deg, #fafafa 70%, #ff8080 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
 }
