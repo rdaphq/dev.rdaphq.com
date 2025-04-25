@@ -29,11 +29,11 @@
     <title>Rdap Is A Dev. - React, Angular, Sass, JavaScript, Node.js, Shopify, Discord.</title>
 </head>
 <body>
-    <div id="splash" class="splash unBlur">
+    <!-- <div id="splash" class="splash unBlur">
         <div class="splash-image animate-pulse">
             <img src="https://rdaphq.com/assets/logo.png" alt="Rdap Logo">
         </div>
-    </div>
+    </div> -->
 
     <!-- MODALS -->
     <div class="hire">
@@ -43,11 +43,11 @@
     </div>
     <!-- END MODALS -->
 
-    <nav class="navbar sticky top-[0] flex items-center justify-center z-100">
+    <nav class="navbar sticky top-[0] flex items-center justify-center z-999">
         <div class="navbar-links">
-            <a href="#projects">Projects</a>
-            <a href="/github">Github</a>
-            <a href="/discord">Discord</a>
+            <a id="to-projects" href="javascript:void()">Projects</a>
+            <a href="https://rdaphq.com/github">Github</a>
+            <a href="https://rdaphq.com/discord">Discord</a>
         </div>
 
         <div class="navbar-logo">
@@ -62,27 +62,27 @@
         </div>
     </nav>
 
-    <div class="container max-w-[1100px] mx-auto">
+    <div class="container max-w-[1100px]">
         <main>
-            <div class="hero min-h-120 flex items-center justify-center">
+            <div class="hero min-h-120 flex flex-col items-center justify-center gap-20 md:flex-row md:text-left">
                 <div class="hero-bg-point slideView"></div>
 
-                <div class="hero-text slideView">
-                    <p class="text-gray-400 text-[.6rem] relative bottom-[1rem] uppercase ">Just look at this website</p>
-                    <h1 class="text-white text-7xl tracking-tighter text-balance font-bold"><span class="text-red-500">Rdap</span> is a frontend developer and designer.</h1>
+                <div class="hero-text slideView text-center md:text-left">
+                    <p class="text-gray-500 text-[.6rem] relative bottom-[1rem] uppercase">Just look at this website</p>
+                    <h1 class="text-white text-5xl tracking-tighter text-balance font-bold md:text-7xl"><span class="text-red-500 text-shadow-sm/20 text-shadow-black">Rdap</span> is a frontend developer and designer.</h1>
                     <a id="explore" class="explore text-red-500 relative top-[1rem] hover:text-white" href="javascript:void()">Explore <span>---></span></a>
                 </div>
 
                 <div class="hero-image slideView">
-                    <img class="w-200" src="assets/rdapsnake.png" alt="Rdap Snake">
+                    <img class="w-60 md:w-200" src="assets/rdapsnake.png" alt="Rdap Snake">
                 </div>
             </div>
 
 
-            <div id="start" class="knowledge">
-                <h2 class="text-white text-4xl tracking-tighter section-title">Knowledge</h2>
+            <div class="knowledge">
+                <h2 id="start" class="text-white text-4xl tracking-tighter section-title">Knowledge</h2>
 
-                <div class="knowledge-container gap-4 slideView">
+                <div class="knowledge-container gap-4 flex slideView">
                     <div class="knowledge-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
                         <p>JavaScript</p>
@@ -117,8 +117,8 @@
                 </div>
             </div>
 
-            <div id="projects" class="projects">
-                <h2 class="text-white text-4xl tracking-tighter section-title">Projects</h2>
+            <div class="projects">
+                <h2 id="projects" class="text-white text-4xl tracking-tighter section-title">Projects</h2>
 
                 <div class="projects-bg-point"></div>
 
@@ -208,13 +208,21 @@
             scrollTo({ top: view.offsetTop - 20, behavior: "smooth" });
         })
 
+        // PROJECTS BUTTON
+        const projectsButton = document.getElementById("to-projects");
+        const viewProjects = document.getElementById("projects");
+
+        projectsButton.addEventListener("click", () => {
+            scrollTo({ top: viewProjects.offsetTop - 20, behavior: "smooth" });
+        })
+
         // COPYRIGHT
         const year = new Date().getFullYear();
         const copyright = document.getElementById("copyright");
         copyright.innerHTML = `&copy; ${year} Rdap. All rights reserved.`;
     </script>
 
-    <script>
+    <!-- <script>
         const splash = document.getElementById('splash');
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -236,6 +244,6 @@
         setTimeout(() => {
             pageScroll = pageScroll.style.overflow = 'auto';
         }, 3000);
-    </script>
+    </script> -->
 </body>
 </html>

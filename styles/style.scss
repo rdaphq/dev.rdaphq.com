@@ -80,6 +80,7 @@ body {
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
+    padding: 0 1rem;
 
     .section-title {
         font-family: $inter;
@@ -126,9 +127,7 @@ body {
 
 .hero {
     .explore {
-        width: fit-content;
-        padding: .5rem 0;
-        display: flex;
+        padding: .5rem;
         transition: all .3s ease-in-out;
         gap: 1rem;
 
@@ -151,6 +150,14 @@ body {
         filter: blur(80px);
         bottom: 50px;
         left: 80px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .hero-bg-point {
+            filter: blur(40px);
+            bottom: -120px;
+            left: -40px;
+        }
     }
 }
 
@@ -270,7 +277,8 @@ body {
 }
 
 .socials {
-    padding: 6rem 0;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
 
     h2 {
         padding: .5rem;
