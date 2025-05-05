@@ -29,11 +29,11 @@
     <title>Rdap Is A Dev. - React, Angular, Sass, JavaScript, Node.js, Shopify, Discord.</title>
 </head>
 <body>
-    <div id="splash" class="splash unBlur">
+    <!-- <div id="splash" class="splash unBlur">
         <div class="splash-image animate-pulse">
             <img src="https://rdaphq.com/assets/logo.png" alt="Rdap Logo">
         </div>
-    </div>
+    </div> -->
 
     <!-- MODALS -->
     <div class="hire">
@@ -43,7 +43,7 @@
     </div>
     <!-- END MODALS -->
 
-    <nav class="navbar sticky top-[0] flex items-center justify-center z-999">
+    <nav class="navbar sticky top-0 flex items-center justify-center z-70">
         <div class="navbar-links">
             <a id="to-projects" href="javascript:void()">Projects</a>
             <a href="https://rdaphq.com/github">Github</a>
@@ -51,26 +51,25 @@
         </div>
 
         <div class="navbar-logo">
-            <!-- <img src="https://rdaphq.com/assets/logo.png" alt="Rdap Logo"> -->
             <a href="/"><img src="assets/iso.png" alt="Rdap Iso"></a>
         </div>
 
         <div class="navbar-links">
             <a href="javascript:void()">Hire</a>
-            <a href="javascript:void()">Socials</a>
             <a href="https://rdaphq.com">Contact</a>
+            <a id="to-socials" href="javascript:void()">Socials</a>
         </div>
     </nav>
 
     <div class="container max-w-[1100px]">
         <main>
-            <div class="hero min-h-120 flex flex-col items-center justify-center gap-20 md:flex-row md:text-left">
+            <div class="hero min-h-120 flex flex-col items-center justify-center gap-20 md:gap-0 md:flex-row md:text-left">
                 <div class="hero-bg-point slideView"></div>
 
                 <div class="hero-text slideView text-center md:text-left">
                     <p class="text-gray-500 text-[.6rem] relative bottom-[1rem] uppercase">Just look at this website</p>
-                    <h1 class="text-white text-5xl tracking-tighter text-balance font-bold md:text-7xl"><span class="text-red-500 text-shadow-sm/20 text-shadow-black">Rdap</span> is a frontend developer and designer.</h1>
-                    <a id="explore" class="explore text-red-500 relative top-[1rem] hover:text-white" href="javascript:void()">Explore <span>---></span></a>
+                    <h1 class="text-white text-5xl tracking-tighter text-balance font-bold lg:text-7xl"><span class="text-red-500 text-shadow-sm/20 text-shadow-black">Rdap</span> is a frontend developer and designer.</h1>
+                    <a id="explore" class="explore text-center text-red-500 relative left-[50%] md:left-0 top-[1rem] -translate-x-[50%] md:-translate-x-0 hover:text-white" href="javascript:void()">Explore <span>---></span></a>
                 </div>
 
                 <div class="hero-image slideView">
@@ -82,7 +81,8 @@
             <div class="knowledge">
                 <h2 id="start" class="text-white text-4xl tracking-tighter section-title">Knowledge</h2>
 
-                <div class="knowledge-container gap-4 flex slideView">
+                <div class="knowledge-container gap-4 grid grid-cols-2 wrap slideView lg:grid-cols-6 sm:grid-cols-3">
+
                     <div class="knowledge-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
                         <p>JavaScript</p>
@@ -118,11 +118,11 @@
             </div>
 
             <div class="projects">
-                <h2 id="projects" class="text-white text-4xl tracking-tighter section-title">Projects</h2>
+                <h2 id="projects" class="text-white text-4xl text-center tracking-tighter section-title lg:text-left">Projects</h2>
 
                 <div class="projects-bg-point"></div>
 
-                <div class="projects-container flex gap-3">
+                <div class="projects-container flex gap-6 items-center justify-center flex-wrap">
                     <div class="project">
                         <div class="project-image">
                             <a href="/projects/hexa"><img src="assets/hexa.png" alt="Hexa"></a>
@@ -160,7 +160,7 @@
                         <div class="project-data">
                             <div class="data-container">
                                 <h3 class="text-white text-2xl tracking-tighter">EzModals</h3>
-                                <p class="text-gray-400">A library to add pre-built modals to websites HTML classes only.</p>
+                                <p class="text-gray-400">A library to add pre-built modals with HTML classes only.</p>
                             </div>
                         </div>
                         <div class="project-go">
@@ -171,7 +171,7 @@
             </div>
 
             <div class="socials flex justify-center">
-                <div class="socials-box">
+                <div id="socials" class="socials-box">
                     <h2 class="text-white text-4xl tracking-tighter section-title">Socials</h2>
                     <div class="socials-container flex gap-5">
                         <a href="https://rdaphq.com/github" class="socials-item" target="_blank"><i class="fi fi-brands-github"></i></a>
@@ -184,10 +184,10 @@
         </main>
     </div>
 
-    <footer class="footer flex items-center justify-between h-30 bg-[#00000060] backdrop-blur-sm border-t border-[#ffffff20] px-5">
-        <div class="footer-content flex flex-col items-start justify-center gap-1 text-[.7rem]">
+    <footer class="footer flex justify-center items-center md:justify-between text-center md:text-left h-30 bg-[#00000060] backdrop-blur-sm border-t border-[#ffffff20] px-5 flex-wrap">
+        <div class="footer-content flex flex-col items-center justify-center gap-1 text-[.7rem] md:items-start">
             <p class="copyright text-gray-400" id="copyright"></p>
-            <p class="text-gray-500">This website is a portfolio designed and developed only for Rdap to show clients and third-parties his projects.</p>
+            <p class="text-gray-500">This website is a portfolio designed and developed to show my projects to clients and third-parties.</p>
         </div>
 
         <div class="footer-socials flex items-center justify-center relative top-[2px] gap-4 text-[1.3rem]">
@@ -205,7 +205,7 @@
         const view = document.getElementById("start");
 
         exploreButton.addEventListener("click", () => {
-            scrollTo({ top: view.offsetTop - 20, behavior: "smooth" });
+            scrollTo({ top: view.offsetTop - 100, behavior: "smooth" });
         })
 
         // PROJECTS BUTTON
@@ -213,7 +213,15 @@
         const viewProjects = document.getElementById("projects");
 
         projectsButton.addEventListener("click", () => {
-            scrollTo({ top: viewProjects.offsetTop - 20, behavior: "smooth" });
+            scrollTo({ top: viewProjects.offsetTop - 50, behavior: "smooth" });
+        })
+
+        // SOCIALS BUTTON
+        const socialsButton = document.getElementById("to-socials");
+        const viewSocials = document.getElementById("socials");
+
+        socialsButton.addEventListener("click", () => {
+            scrollTo({ top: viewSocials.offsetTop - 50, behavior: "smooth" });
         })
 
         // COPYRIGHT
@@ -222,7 +230,7 @@
         copyright.innerHTML = `&copy; ${year} Rdap. All rights reserved.`;
     </script>
 
-    <script>
+    <!-- <script>
         const splash = document.getElementById('splash');
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -244,6 +252,6 @@
         setTimeout(() => {
             pageScroll = pageScroll.style.overflow = 'auto';
         }, 3000);
-    </script>
+    </script> -->
 </body>
 </html>
