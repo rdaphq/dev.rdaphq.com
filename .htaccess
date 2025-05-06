@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Remove ?i=1 specifically
+RewriteCond %{QUERY_STRING} ^i=1$ [NC]
+RewriteRule ^$ /? [L,R=301]
+
+# Or more generally remove any query string
+# RewriteCond %{QUERY_STRING} .
+# RewriteRule ^$ /? [L,R=301]
