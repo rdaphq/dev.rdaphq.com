@@ -41,7 +41,45 @@ $dg: #ffffff30;
     box-shadow: 0 0 100px 90px $pr;
     filter: blur(70px);
 }
-// BG POINT
+
+.alert {
+    user-select: none;
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    color: #000;
+    font-size: 0.9rem;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3137254902);
+    display: none;
+    z-index: 100;
+
+    &-slide {
+        animation: slide 4s ease-in-out;
+    }
+}
+
+@keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(100%);
+    }
+    5% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0%);
+    }
+    95% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(100%);
+    }
+}
 
 ::selection {
     background-color: $pr;
@@ -53,11 +91,15 @@ html {
 }
 
 body {
+    color: $wh;
     width: 100%;
-    height: 100vh;
     font-family: $geist;
     background-color: $bg;
-    color: $wh;
+    overflow-x: hidden;
+    min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .splash {
@@ -95,10 +137,14 @@ body {
 
 .navbar {
     gap: 3rem;
+    display: flex;
     padding: .8rem 0;
-    background-color: #00000050;
-    border-bottom: 1px solid $dg;
-    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: difference;
+    position: sticky;
+    z-index: 90;
+    top: 0;
 
     &-logo {
         width: 30px;
@@ -122,46 +168,63 @@ body {
                 color: $wh;
             }
         }
+
+        @media screen and (max-width: 30rem) {
+            display: none;
+        }
     }
 }
 
 .hero {
     .explore {
-        width: fit-content;
-        padding: .5rem 0;
-        display: flex;
-        transition: all .3s ease-in-out;
         gap: 1rem;
+        display: flex;
+        padding: .5rem 0;
+        width: fit-content;
+        transition: all .3s ease-in-out;
 
         &:hover {
             gap: 2rem;
         }
     }
+
     &-text {
         font-family: $inter;
     }
 
     &-image {
+        width: 50%;
+
         img {
+            width: 100%;
             user-select: none;
         }
     }
 
     &-bg-point {
         @include bgPoint;
+
         filter: blur(80px);
         bottom: 50px;
         left: 80px;
+
+        @media screen and (max-width: 40rem) {
+            box-shadow: 0 0 5px 40px $pr;
+            filter: blur(40px);
+            bottom: -120px;
+            left: 0;
+        }
     }
 }
 
 .knowledge {
     display: flex;
     flex-direction: column;
-    padding: 6rem 0;
+    padding: 4rem 0;
     gap: 2rem;
 
     &-container {
+        user-select: none;
         width: 100%;
     }
     
@@ -191,8 +254,14 @@ body {
 
     &-bg-point {
         @include bgPoint;
-        filter: blur(120px);
-        top: 140px;
+        filter: blur(110px);
+        right: -850px;
+        top: 0;
+
+        // @media screen and (max-width: 30rem) {
+        //     right: -300px;
+        //     top: -100px;
+        // }
     }
 }
 
@@ -276,45 +345,49 @@ body {
     }
 
     &-box {
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 2rem 3rem;
-    
+        padding: 0 1.5rem;
         border: 2px solid #ffffff40;
         border-radius: 4rem;
+
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            border-color: $pr;
+            box-shadow: 0 0 10px $pr;
+            background-color: #ff404010;
+        }
     }
 
     &-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-
         a {
-            top: 4px;
-            position: relative;
-            font-size: 2rem;
+            color: $wh;
+            padding: 1.5rem;
+            line-height: 0;
+            font-size: 3.5rem;
+            transition: all .2s ease;
+
+            @media screen and (max-width: 30rem) {
+                top: 0;
+            }
+
+            &:hover {
+                translate: 0 -.3rem;
+                color: $pr;
+            }
         }
     }
 }
 
 .footer {
-    padding: 0 2rem;
-    gap: 1rem;
-
-    // md = 768px (48rem)
-    @media screen and (max-width: 48rem) {
-        padding: 2rem 1rem;
-    }
+    padding: 2rem;
+    gap: 2rem;
 
     a, i {
-        color: $wh;
+        color: $sg;
         transition: all .2s ease;
 
         &:hover {
-            color: $pr;
+            color: $wh;
         }
     }
 }
