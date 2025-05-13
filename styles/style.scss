@@ -86,8 +86,22 @@ $dg: #ffffff30;
     color: $bl;
 }
 
+::-webkit-scrollbar {
+    width: .5rem;
+
+    &-track {
+        background-color: $sb;
+    }
+
+    &-thumb {
+        background-color: #777;
+    }
+}
+
 html {
-    scroll-behavior: smooth;    
+    will-change: transform, opacity;
+    scroll-behavior: smooth;   
+    overflow-x: hidden; 
 }
 
 body {
@@ -100,6 +114,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
+    min-height: 100dvh;
 }
 
 .splash {

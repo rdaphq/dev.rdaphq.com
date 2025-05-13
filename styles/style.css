@@ -85,8 +85,20 @@
   color: #111;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #777;
+}
+
 html {
+  will-change: transform, opacity;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -99,6 +111,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+  min-height: 100dvh;
 }
 
 .splash {
