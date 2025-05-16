@@ -98,6 +98,10 @@ $dg: #ffffff30;
     }
 }
 
+h2 {
+    padding: .5rem;
+}
+
 html {
     will-change: transform, opacity;
     scroll-behavior: smooth;   
@@ -125,7 +129,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    // display: none;
+    display: none;
 
     img {
         width: 100px;
@@ -143,7 +147,7 @@ body {
         font-weight: 600;
         color: transparent;
         background: #fafafa;
-        background: linear-gradient(180deg, #fafafa 70%, #ff8080 100%);
+        background: linear-gradient(180deg, #fafafa 50%, #ff6363 100%);
         background-clip: text;
         -webkit-background-clip: text;
     }
@@ -219,8 +223,8 @@ body {
         @include bgPoint;
 
         filter: blur(80px);
-        bottom: 50px;
-        left: 80px;
+        bottom: 80px;
+        left: 70px;
 
         @media screen and (max-width: 40rem) {
             box-shadow: 0 0 5px 40px $pr;
@@ -244,8 +248,11 @@ body {
     
     &-item {
         gap: .5rem;
-        padding: 1rem;
+        padding: 1.2rem;
         display: flex;
+        min-width: 100px;
+        width: 160px;
+        height: 100px;
         background-color: #ffffff09;
         flex-direction: column;
         border: 2px solid $dg;
@@ -282,17 +289,17 @@ body {
 .projects {
     display: flex;
     flex-direction: column;
-    padding: 8rem 0;
+    padding: 6rem 0;
 
     &-container {
         margin-top: 1.5rem;
         align-items: stretch;
-        justify-content: space-between;
+        justify-content: center;
 
         // lg = 1024px (64rem)
-        @media screen and (max-width: 64rem) {
-            justify-content: center;
-        }
+        // @media screen and (max-width: 64rem) {
+        //     justify-content: center;
+        // }
     }
 
     &-bg-point {
@@ -307,12 +314,17 @@ body {
     min-width: 300px;
     max-width: 320px;
     display: flex;
-    overflow: hidden;
+    // overflow: hidden;
     border-radius: 1rem;
     flex-direction: column;
     justify-content: space-between;
     background-color: #ffffff08;
     position: relative;
+
+    &-tag {
+        font-size: .7rem;
+        padding: .5rem;
+    }
     
     &-data {
         padding: 1.5rem;
@@ -343,6 +355,9 @@ body {
 
     &-image {
         width: 100%;
+        height: 220px;
+        overflow: hidden;
+        border-radius: 1rem 1rem 0 0;
 
         img {
             width: 100%;

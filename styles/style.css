@@ -1,23 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Climate+Crisis&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Dela+Gothic+One&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Questrial&family=Space+Grotesk:wght@300..700&family=Special+Gothic+Expanded+One&family=Syne:wght@400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css");
-.slideView {
-  animation: slideView 1.5s ease-in-out both;
-  animation-delay: 3s;
-}
-
-@keyframes slideView {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  70% {
-    transform: translateY(-8px);
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
 .unBlur {
   animation: unblur 2s ease-in-out both;
   animation-delay: 1s;
@@ -95,6 +77,10 @@
   background-color: #777;
 }
 
+h2 {
+  padding: 0.5rem;
+}
+
 html {
   will-change: transform, opacity;
   scroll-behavior: smooth;
@@ -122,6 +108,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 .splash img {
   width: 100px;
@@ -138,7 +125,7 @@ body {
   font-weight: 600;
   color: transparent;
   background: #fafafa;
-  background: linear-gradient(180deg, #fafafa 70%, #ff8080 100%);
+  background: linear-gradient(180deg, #fafafa 50%, #ff6363 100%);
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -209,8 +196,8 @@ body {
   box-shadow: 0 0 100px 90px #ff4040;
   filter: blur(70px);
   filter: blur(80px);
-  bottom: 50px;
-  left: 80px;
+  bottom: 80px;
+  left: 70px;
 }
 @media screen and (max-width: 40rem) {
   .hero-bg-point {
@@ -233,8 +220,11 @@ body {
 }
 .knowledge-item {
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 1.2rem;
   display: flex;
+  min-width: 100px;
+  width: 160px;
+  height: 100px;
   background-color: rgba(255, 255, 255, 0.0352941176);
   flex-direction: column;
   border: 2px solid rgba(255, 255, 255, 0.1882352941);
@@ -268,17 +258,12 @@ body {
 .projects {
   display: flex;
   flex-direction: column;
-  padding: 8rem 0;
+  padding: 6rem 0;
 }
 .projects-container {
   margin-top: 1.5rem;
   align-items: stretch;
-  justify-content: space-between;
-}
-@media screen and (max-width: 64rem) {
-  .projects-container {
-    justify-content: center;
-  }
+  justify-content: center;
 }
 .projects-bg-point {
   width: 1px;
@@ -298,12 +283,15 @@ body {
   min-width: 300px;
   max-width: 320px;
   display: flex;
-  overflow: hidden;
   border-radius: 1rem;
   flex-direction: column;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.031372549);
   position: relative;
+}
+.project-tag {
+  font-size: 0.7rem;
+  padding: 0.5rem;
 }
 .project-data {
   padding: 1.5rem;
@@ -329,6 +317,9 @@ body {
 }
 .project-image {
   width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
 }
 .project-image img {
   width: 100%;
