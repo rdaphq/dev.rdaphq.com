@@ -1,6 +1,5 @@
 const lenis = new Lenis({
-    autoRaf: true,
-    useTransform: false
+    autoRaf: true
 });
 
 lenis.on('scroll', ScrollTrigger.update);

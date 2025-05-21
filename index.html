@@ -40,7 +40,7 @@
     <title>Rdap - Frontend Developer | React, Sass, JavaScript, Node.js, Shopify, Discord.</title>
 </head>
 <body>
-    <div id="splash" class="splash unBlur">
+    <div id="splash" class="splash flex fixed items-center justify-center unBlur">
         <div class="splash-image">
             <!-- <img src="assets/loadcat.gif" alt="Load Cat"> -->
             <!-- <img src="assets/snoopy-spin.gif" alt="Snoopy Spin"> -->
@@ -48,12 +48,12 @@
         </div>
     </div>
 
-    <div class="translate absolute right-8 top-8 z-100">
-        <i class="fi fi-br-language-exchange"></i>
-        <div class="translate-options flex hidden">
-            <a href=""><img src="assets/spain.png" alt="ES Flag"></a>
+    <div id="translate-trigger" class="translate absolute right-8 top-8 flex items-center justify-end gap-2">
+        <div id="translate-options" class="translate-options debug flex">
             <a href=""><img src="assets/usa.png" alt="EN Flag"></a>
+            <a href=""><img src="assets/spain.png" alt="ES Flag"></a>
         </div>
+        <button class="translate-trigger debug"><i class="fi fi-br-language-exchange"></i></button>
     </div>
 
     <div id="alerts"></div>
@@ -312,5 +312,18 @@
     <script src="scripts/lenis.js"></script>
     <script src="scripts/load.js"></script>
     <script src="scripts/gsap.js"></script>
+
+    <script>
+        const translateTrigger = document.getElementById('translate-trigger');
+        const translateOptions = document.getElementById('translate-options');
+
+        translateTrigger.addEventListener('click', function () {
+            if (translateOptions.style.width === '0%') {
+                translateOptions.style.width = '100%';
+            } else {
+                translateOptions.style.width = '0%';
+            }
+        });
+    </script>
 </body>
 </html>
