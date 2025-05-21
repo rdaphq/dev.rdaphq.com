@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="scrollLoad">
+<html lang="es" id="scrollLoad">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +21,8 @@
     <link rel="shortcut icon" href="assets/iso.png" type="image/x-icon">
 
     <!-- LENIS -->
-    <!-- <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script> -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css"> -->
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
 
     <!-- TAILWIND -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     <!-- CANONICAL -->
-    <link rel="canonical" href="https://dev.rdaphq.com">
+    <link rel="canonical" href="https://dev.rdaphq.com/es">
 
     <title>Rdap - Frontend Developer | React, Sass, JavaScript, Node.js, Shopify, Discord.</title>
 </head>
@@ -48,19 +48,11 @@
         </div>
     </div>
 
-    <div class="translate absolute right-8 top-8 z-100">
-        <i class="fi fi-br-language-exchange"></i>
-        <div class="translate-options flex hidden">
-            <a href=""><img src="assets/spain.png" alt="ES Flag"></a>
-            <a href=""><img src="assets/usa.png" alt="EN Flag"></a>
-        </div>
-    </div>
-
     <div id="alerts"></div>
 
     <nav class="navbar">
         <div class="navbar-links">
-            <a id="to-projects" href="javascript:void()">Projects</a>
+            <a id="to-projects" href="javascript:void()">Proyectos</a>
             <a href="https://rdaphq.com/github">Github</a>
         </div>
 
@@ -69,8 +61,8 @@
         </div>
 
         <div class="navbar-links">
-            <a href="mailto:rdaphq@gmail.com">Hire</a>
-            <a id="to-socials" href="javascript:void()">Socials</a>
+            <a href="mailto:rdaphq@gmail.com">Contratar</a>
+            <a id="to-socials" href="javascript:void()">Redes</a>
         </div>
     </nav>
 
@@ -80,11 +72,11 @@
                 <div class="hero-bg-point slideView"></div>
 
                 <div class="hero-text slideView text-center md:text-left">
-                    <p class="text-[.6rem] relative bottom-[1rem] uppercase text-gray-300 sm:text-gray-400">Just look at this website.</p>
+                    <p class="text-[.6rem] relative bottom-[1rem] uppercase text-gray-300 sm:text-gray-400">Sólo mira este sitio web.</p>
                     <h1 class="text-white text-5xl tracking-tighter text-balance font-bold lg:text-7xl xl:text-8xl">
                     <span class="text-red-500 text-shadow-sm/10 text-shadow-black">Rdap</span><br><span id="typewrite"></span>
                     </h1>
-                    <a id="explore" class="explore text-center text-red-500 relative left-[50%] md:left-0 top-[1rem] -translate-x-[50%] md:-translate-x-0 hover:text-white" href="javascript:void()">Explore <span>---></span></a>
+                    <a id="explore" class="explore text-center text-red-500 relative left-[50%] md:left-0 top-[1rem] -translate-x-[50%] md:-translate-x-0 hover:text-white" href="javascript:void()">Explorar <span>---></span></a>
                 </div>
 
                 <div class="hero-image slideView">
@@ -93,7 +85,7 @@
             </section>
 
             <section class="knowledge">
-                <h2 id="start" class="text-white text-5xl tracking-tighter section-title text-center slideView">Knowledge</h2>
+                <h2 id="start" class="text-white text-5xl tracking-tighter section-title text-center slideView">Conocimientos</h2>
 
                 <div class="knowledge-container gap-4 flex items-center justify-center flex-wrap slideView">
                     <div class="knowledge-item">
@@ -154,7 +146,7 @@
             </section>
 
             <section class="projects">
-                <h2 id="projects" class="slideView text-white text-5xl text-center tracking-tighter section-title">Projects & Works</h2>
+                <h2 id="projects" class="slideView text-white text-5xl text-center tracking-tighter section-title">Projectos y Trabajos</h2>
 
                 <div class="projects-bg-point"></div>
 
@@ -166,27 +158,27 @@
                         <div class="project-data">
                             <div class="data-container">
                                 <h3 class="text-white text-2xl tracking-tighter">Hexa</h3>
-                                <p class="text-gray-400">A powerful multipurpose bot for Discord using discord.js</p>
+                                <p class="text-gray-400">Un poderoso bot multipropósito para Discord usando discord.js</p>
                             </div>
                         </div>
                         <div class="project-go">
-                            <a href="https://hexa.rdaphq.com" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                            <a href="https://hexa.rdaphq.com" class="view-project text-red-500 hover:text-white">Ver <span>--></span></a>
                         </div>
                     </div>
 
                     <div class="project">
-                        <span class="project-tag absolute -top-2 -right-4 rounded-md rotate-6 text-black bg-yellow-500 font-bold">NOT AVAILABLE</span>
+                        <span class="project-tag absolute -top-2 -right-4 rounded-md rotate-6 text-black bg-yellow-500 font-bold">NO DISPONIBLE</span>
                         <div class="project-image">
                             <a id="quikie" href="javascript:void()"><img src="assets/quikie.png" alt="Quikie CSS"></a>
                         </div>
                         <div class="project-data">
                             <div class="data-container">
                                 <h3 class="text-white text-2xl tracking-tighter">Quikie</h3>
-                                <p class="text-gray-400">A library to create landing pages easily using native HTML and CSS.</p>
+                                <p class="text-gray-400">Una librería para crear landing pages facilmente usando HTML y CSS nativo.</p>
                             </div>
                         </div>
                         <div class="project-go">
-                            <a id="quikie_view" href="javascript:void()" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                            <a id="quikie_view" href="javascript:void()" class="view-project text-red-500 hover:text-white">Ver <span>--></span></a>
                         </div>
                     </div>
 
@@ -197,11 +189,11 @@
                         <div class="project-data">
                             <div class="data-container">
                                 <h3 class="text-white text-2xl tracking-tighter">EzModals</h3>
-                                <p class="text-gray-400">A library to add pre-built modals with HTML classes only.</p>
+                                <p class="text-gray-400">Una librería para añadir modales preconstruidos sólo con HTML.</p>
                             </div>
                         </div>
                         <div class="project-go">
-                            <a href="https://github.com/rdaphq/ezmodals" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                            <a href="https://github.com/rdaphq/ezmodals" class="view-project text-red-500 hover:text-white">Ver <span>--></span></a>
                         </div>
                     </div>
 
@@ -212,27 +204,27 @@
                         <div class="project-data">
                             <div class="data-container">
                                 <h3 class="text-white text-2xl tracking-tighter">MT-09</h3>
-                                <p class="text-gray-400">A landing page to present the new Yamaha MT-09 in a modern way.</p>
+                                <p class="text-gray-400">Una landing page para presentar la nueva Yamaha MT-09 de manera moderna.</p>
                             </div>
                         </div>
                         <div class="project-go">
-                            <a href="https://yamaha.rdaphq.com" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                            <a href="https://yamaha.rdaphq.com" class="view-project text-red-500 hover:text-white">Ver <span>--></span></a>
                         </div>
                     </div>
 
                     <div class="project">
-                        <span class="project-tag absolute -top-2 -right-4 rounded-md rotate-6 text-black bg-teal-300 font-bold">REAL PROJECT</span>
+                        <span class="project-tag absolute -top-2 -right-4 rounded-md rotate-6 text-black bg-teal-300 font-bold">PROYECTO REAL</span>
                         <div class="project-image">
                             <a href="https://seleniaparra.com"><img src="assets/selenia-page.png" alt="Yamaha Modern Page by Rdap"></a>
                         </div>
                         <div class="project-data">
                             <div class="data-container">
                                 <h3 class="text-white text-2xl tracking-tighter">Selenia Parra</h3>
-                                <p class="text-gray-400">A lawyer's website, managed by a CMS developed using PHP.</p>
+                                <p class="text-gray-400">La página web de una abogada, administrada por un CMS desarrollado usando PHP.</p>
                             </div>
                         </div>
                         <div class="project-go">
-                            <a href="https://seleniaparra.com" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                            <a href="https://seleniaparra.com" class="view-project text-red-500 hover:text-white">Ver <span>--></span></a>
                         </div>
                     </div>
                 </div>
@@ -240,38 +232,38 @@
 
             <section class="experience flex justify-center">
                 <div class="slideView experience-container flex flex-col gap-6">
-                    <h2 id="projects" class="slideView text-white text-5xl text-center tracking-tighter section-title">Work Experience</h2>
+                    <h2 id="projects" class="slideView text-white text-5xl text-center tracking-tighter section-title">Experiencia Laboral</h2>
 
                     <div class="experience-timeline flex flex-col gap-16 relative">
                         <div class="experience-item">
                             <div class="experience-item-data flex flex-col items-start justify-start gap-2">
                                 <span class="text-1xl text-gray-300">Nov 2024 - Sep 2025</span>
-                                <h3 class="text-white font-bold text-2xl tracking-tighter">Frontend Developer</h3>
-                                <p class="text-gray-400">Currently working as a "general" developer at <a href="javascript:void()" class="text-red-500 hover:text-white">Fénixpuntonet</a>, maintaining in Shopify projects, PHP websites, creating/boosting SEO plans for clients, redesigning old wesites and creating modern landing pages from scratch.</p>
+                                <h3 class="text-white font-bold text-2xl tracking-tighter">Desarrollador Frontend</h3>
+                                <p class="text-gray-400">Actualmente trabajando como un desarrollador general en <a href="javascript:void()" class="text-red-500 hover:text-white">Fénixpuntonet</a>, manteniendo proyectos y tiendas de Shopify, sitios web en PHP, creando planes y potenciando SEO para clientes, rediseñando sitios web antiguos y creando landing pages modernas desde cero.</p>
                             </div>
                         </div>
 
                         <div class="experience-item">
                             <div class="experience-item-data flex flex-col items-start justify-start gap-2">
-                                <span class="text-1xl text-gray-300">Jan 2023 - Now</span>
-                                <h3 class="text-white font-bold text-2xl tracking-tighter">CMS Developer</h3>
-                                <p class="text-gray-400">I created a custom CMS and developed the website for <a href="https://seleniaparra.com" class="text-red-500 hover:text-white">Selenia Parra</a>, a professional lawyer from Colombia. Her website includes my custom CMS developed with PHP that allows admin users to create, read, update or delete blog posts, pages and products.</p>
+                                <span class="text-1xl text-gray-300">Ene 2023 - Actualmente</span>
+                                <h3 class="text-white font-bold text-2xl tracking-tighter">Desarrollador CMS</h3>
+                                <p class="text-gray-400">He creado un CMS personalizado y he desarrollado el sitio web para <a href="https://seleniaparra.com" class="text-red-500 hover:text-white">Selenia Parra</a>, una abogada profesional de Colombia. Su sitio web incluye mi CMS personalizado desarrollado con PHP que permite a usuarios administradores crear, editar, leer y borrar publicaciones del blog, páginas y productos.</p>
                             </div>
                         </div>
 
                         <div class="experience-item">
                             <div class="experience-item-data flex flex-col items-start justify-start gap-2">
                                 <span class="text-1xl text-gray-300">Sep 2020 - Ago 2021</span>
-                                <h3 class="text-white font-bold text-2xl tracking-tighter">Web Developer</h3>
-                                <p class="text-gray-400">I designed and developed the website for <a href="https://instagram.com/antoja2food" class="text-red-500 hover:text-white">Antoja2</a>, a restaurant in Copacabana, Colombia. The website included the complete restaurant menu and a contact form. Restaurant it's closed now.</p>
+                                <h3 class="text-white font-bold text-2xl tracking-tighter">Desarrollador Web</h3>
+                                <p class="text-gray-400">He diseñado y desarrollado el sitio web para <a href="https://instagram.com/antoja2food" class="text-red-500 hover:text-white">Antoja2</a>, un restaurante en Copacabana, Colombia. El sitio web incluía el menú completo del restaurante y un formulario de contacto. El restaurante está cerrado actualmente.</p>
                             </div>
                         </div>
 
                         <div class="experience-item">
                             <div class="experience-item-data flex flex-col items-start justify-start gap-2">
-                                <span class="text-1xl text-gray-300">Jun 2019 - Now <span class="text-sm text-gray-500">(remote)</span></span>
-                                <h3 class="text-white font-bold text-2xl tracking-tighter">Bots/Apps Developer</h3>
-                                <p class="text-gray-400">Since 2019, I'm a bot developer on <a href="https://discord.com" class="text-red-500 hover:text-white">Discord</a>. I'm maintaining my big project <a class="text-red-500 hover:text-white" href="https://hexa.rdaphq.com">Hexa</a>, the Monster Energy bot and also Pringles, a discontinued bot for lack-of-time reasons.</p>
+                                <span class="text-1xl text-gray-300">Jun 2019 - Actualmente <span class="text-sm text-gray-500">(remoto)</span></span>
+                                <h3 class="text-white font-bold text-2xl tracking-tighter">Desarrollador de Bots/Apps</h3>
+                                <p class="text-gray-400">Desde 2019, Soy un desarrollador de bots en <a href="https://discord.com" class="text-red-500 hover:text-white">Discord</a>. Estoy manteniendo mi proyecto <a class="text-red-500 hover:text-white" href="https://hexa.rdaphq.com">Hexa</a>, el bot Monster Energy y también Pringles, un bot descontinuado por razones de falta de tiempo.</p>
                             </div>
                         </div>
                     </div>
@@ -295,7 +287,7 @@
     <footer class="footer flex flex-col justify-center items-center md:flex-row md:justify-between text-center md:text-left bg-[#00000060] backdrop-blur-sm border-t border-[#ffffff20]">
         <div class="footer-content flex flex-col items-center justify-center gap-1 text-[.7rem] md:items-start">
             <p class="copyright text-gray-400" id="copyright"></p>
-            <p class="text-gray-500">This website is a portfolio designed and developed to show my projects to clients and third-parties.</p>
+            <p class="text-gray-500">Este sitio web es un portafolio diseñado y desarrollado para mostrar mis proyectos a clientes y terceros.</p>
         </div>
 
         <div class="footer-socials flex items-center justify-center relative top-[2px] gap-4 text-[1.3rem]">
@@ -311,6 +303,6 @@
     <script src="scripts/utils.js"></script>
     <script src="scripts/lenis.js"></script>
     <script src="scripts/load.js"></script>
-    <script src="scripts/gsap.js"></script>
+    <script src="scripts/essap.js"></script>
 </body>
 </html>

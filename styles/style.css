@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Climate+Crisis&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Dela+Gothic+One&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Questrial&family=Space+Grotesk:wght@300..700&family=Special+Gothic+Expanded+One&family=Syne:wght@400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css");
 @import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css");
+.slideView {
+  animation: slideView 1.5s ease-in-out both;
+  animation-delay: 3s;
+}
+
+@keyframes slideView {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .unBlur {
   animation: unblur 2s ease-in-out both;
   animation-delay: 1s;
@@ -85,6 +104,7 @@ html {
   will-change: transform, opacity;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  cursor: crosshair;
 }
 
 body {
@@ -100,18 +120,25 @@ body {
   min-height: 100dvh;
 }
 
+.translate {
+  color: #eee;
+  font-size: 1.2rem;
+}
+.translate img {
+  width: 40px;
+}
+
 .splash {
   width: 100%;
   height: 100vh;
-  position: fixed;
-  z-index: 1000;
+  z-index: 900;
   display: flex;
+  position: fixed;
   align-items: center;
   justify-content: center;
-  display: none;
 }
 .splash img {
-  width: 100px;
+  width: 80px;
 }
 
 .container {
@@ -222,8 +249,8 @@ body {
   gap: 0.5rem;
   padding: 1.2rem;
   display: flex;
-  min-width: 100px;
-  width: 160px;
+  min-width: 120px;
+  width: 150px;
   height: 100px;
   background-color: rgba(255, 255, 255, 0.0352941176);
   flex-direction: column;
@@ -255,6 +282,26 @@ body {
   top: 0;
 }
 
+.experience {
+  padding: 6rem 0;
+}
+.experience-container {
+  max-width: 800px;
+}
+.experience-timeline {
+  border-left: 2px solid #ff4040;
+  padding-left: 2rem;
+}
+.experience-item::before {
+  content: "";
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background-color: #eee;
+  position: absolute;
+  left: -11px;
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -280,18 +327,21 @@ body {
 }
 
 .project {
+  display: flex;
   min-width: 300px;
   max-width: 320px;
-  display: flex;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.031372549);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1254901961);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(160deg, transparent 50%, rgba(255, 255, 255, 0.062745098) 100%);
   position: relative;
 }
 .project-tag {
   font-size: 0.7rem;
   padding: 0.5rem;
+  z-index: 5;
 }
 .project-data {
   padding: 1.5rem;
@@ -319,11 +369,16 @@ body {
   width: 100%;
   height: 220px;
   overflow: hidden;
+  mask-image: linear-gradient(to bottom, #000 20%, transparent 100%);
   border-radius: 1rem 1rem 0 0;
 }
 .project-image img {
   width: 100%;
+  object-fit: cover;
+  object-position: center;
   transition: all 0.2s ease-in-out;
+  position: relative;
+  top: -40px;
 }
 
 .socials {
@@ -334,7 +389,7 @@ body {
 }
 .socials-box {
   padding: 0 1.5rem;
-  border: 2px solid rgba(255, 255, 255, 0.2509803922);
+  border: 1px solid rgba(255, 255, 255, 0.1254901961);
   border-radius: 4rem;
   transition: all 0.2s ease-in-out;
 }
