@@ -30,7 +30,6 @@
     <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
-
     
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
@@ -40,11 +39,18 @@
     <title>Rdap - Frontend Developer | React, Sass, JavaScript, Node.js, Shopify, Discord.</title>
 </head>
 <body>
-    <div id="splash" class="splash unBlur">
+    <div id="splash" class="splash flex fixed items-center justify-center unBlur">
         <div class="splash-image">
             <!-- <img src="assets/loadcat.gif" alt="Load Cat"> -->
             <!-- <img src="assets/snoopy-spin.gif" alt="Snoopy Spin"> -->
             <img src="assets/wumpus-discord.gif" alt="Wumpus Dance">
+        </div>
+    </div>
+
+    <div class="translate absolute right-2 top-2 flex flex-col items-center justify-center gap-6 z-100 md:flex-row md:right-4 md:top-4">
+        <div class="translate-options gap-2 flex flex-col md:flex-row">
+            <a href="/"><img src="assets/usa.png" alt="EN Flag"></a>
+            <a href="/es"><img src="assets/spain.png" alt="ES Flag"></a>
         </div>
     </div>
 
@@ -230,10 +236,10 @@
                 </div>
             </section>
 
-            <section class="experience flex justify-center">
-                <div class="slideView experience-container flex flex-col gap-6">
-                    <h2 id="projects" class="slideView text-white text-5xl text-center tracking-tighter section-title">Experiencia Laboral</h2>
+            <section class="experience flex flex-col items-center justify-center gap-5">
+                <h2 id="projects" class="slideView text-white text-5xl text-center tracking-tighter section-title">Experiencia Laboral</h2>
 
+                <div class="slideView experience-container flex flex-col gap-6">
                     <div class="experience-timeline flex flex-col gap-16 relative">
                         <div class="experience-item">
                             <div class="experience-item-data flex flex-col items-start justify-start gap-2">

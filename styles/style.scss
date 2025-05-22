@@ -107,10 +107,6 @@ $dg: #ffffff30;
     }
 }
 
-h2 {
-    padding: .5rem;
-}
-
 html {
     will-change: transform, opacity;
     scroll-behavior: smooth;
@@ -129,40 +125,31 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
     min-height: 100dvh;
+
+    h2 {
+        padding: .5rem;
+    }
 }
 
 .translate {
     color: $wh;
+    background: $bl;
     font-size: 1.2rem;
-
-    i {
-        padding: .6rem;
-    }
+    border-radius: 2rem;
+    padding: .5rem;
 
     &-trigger {
         z-index: 50;
     }
-    
-    &-options {
-        width: 0%;
 
-        &.open {
-            width: 100%;
-        }
+    i {
+        top: 3px;
+        right: 3px;
+        position: relative;
     }
 
     img {
-        width: 30px;
-    }
-}
-
-@keyframes openWidth {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
+        width: 22px;
     }
 }
 
@@ -308,8 +295,9 @@ body {
 
         &:hover {
             border-color: $pr;
-            background-color: #ff9b9b11;
             backdrop-filter: blur(10px);
+            background-color: #ff9b9b11;
+            filter: drop-shadow(0 0 .3rem $pr);
         }
     }
 
@@ -318,34 +306,6 @@ body {
         filter: blur(110px);
         right: -850px;
         top: 0;
-    }
-}
-
-.experience {
-    padding: 6rem 0;
-
-    &-container {
-        max-width: 800px;
-        // border: 1px solid #ffffff20;
-        // border-radius: 2rem;
-        // padding: 2rem;
-    }
-
-    &-timeline {
-        border-left: 2px solid $pr;
-        padding-left: 2rem;
-    }
-
-    &-item {
-        &::before {
-            content: '';
-            width: 1.3rem;
-            height: 1.3rem;
-            border-radius: 50%;
-            background-color: $wh;
-            position: absolute;
-            left: -11px;
-        }
     }
 }
 
@@ -438,40 +398,51 @@ body {
     }
 }
 
-.socials {
+.experience {
     padding: 6rem 0;
 
-    h2 {
-        padding: .5rem;
+    &-container {
+        max-width: 800px;
+        border: 1px solid #ffffff20;
+        border-radius: 2rem;
+        padding: 2rem;
     }
 
-    &-box {
-        padding: 0 1.5rem;
-        border: 1px solid #ffffff20;
-        border-radius: 4rem;
+    &-timeline {
+        border-left: 2px solid $pr;
+        padding-left: 2rem;
+    }
 
-        transition: all .2s ease-in-out;
-
-        &:hover {
-            border-color: $pr;
-            box-shadow: 0 0 10px $pr;
-            background-color: #ff404010;
+    &-item {
+        &::before {
+            content: '';
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 50%;
+            background-color: $wh;
+            position: absolute;
+            left: -11px;
         }
     }
+}
+
+.socials {
+    padding: 6rem 0;
 
     &-container {
         a {
             color: $wh;
-            padding: 1.5rem;
+            padding: 1rem;
             line-height: 0;
             font-size: 3.5rem;
-            transition: all .2s ease;
+            transition: translate .2s ease, color .2s ease;
 
             @media screen and (max-width: 30rem) {
-                top: 0;
+                padding: .5rem;
             }
 
             &:hover {
+                filter: drop-shadow(0 0 .5rem $pr);
                 translate: 0 -.3rem;
                 color: $pr;
             }
