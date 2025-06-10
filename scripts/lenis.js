@@ -1,11 +1,4 @@
 const lenis = new Lenis({
-    autoRaf: true
+    autoRaf: true,
+    duration: 1.5
 });
-
-lenis.on('scroll', ScrollTrigger.update);
-
-gsap.ticker.add((time) => {
-    lenis.raf(time * 900)
-});
-
-gsap.ticker.lagSmoothing(1);

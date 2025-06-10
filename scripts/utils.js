@@ -23,6 +23,12 @@ socialsButton.addEventListener("click", () => {
 })
 
 // COPYRIGHT
-const year = new Date().getFullYear();
-const copyright = document.getElementById("copyright");
-copyright.innerHTML = `&copy; ${year} Rdap. All rights reserved.`;
+document.addEventListener("DOMContentLoaded", () => {
+    const year = new Date().getFullYear();
+
+    const copyright = document.getElementById("copyright");
+    const copyright_es = document.getElementById("es");
+
+    copyright.innerHTML = `&copy; ${year} Rdap. Almost all rights reserved.`;
+    copyright_es.innerHTML = `&copy; ${year} Rdap. Casi todos los derechos reservados.`;
+})
