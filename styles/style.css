@@ -428,4 +428,8 @@ body h2 {
   color: #eee;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
