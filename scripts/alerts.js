@@ -24,7 +24,6 @@ function displayAlert(type, message) {
     }
 
     alert.classList.add('alert-slide')
-    
     alert.style.display = 'block'
 
     setTimeout(() => {
@@ -40,10 +39,10 @@ const quikieView = document.getElementById('quikie_view')
 
 quikie.addEventListener('click', (a) => {
     a.preventDefault()
-    displayAlert('info', `Quikie has no website or repository yet. Sorry! 😄`)
+    displayAlert('warn', `Quikie is under development!`)
 });
 
 quikieView.addEventListener('click', (a) => {
     a.preventDefault()
-    displayAlert('info', `Quikie has no website or repository yet. Sorry! 😄`)
+    displayAlert('warn', `Quikie is under development!`)
 });

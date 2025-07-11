@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.to("#typewrite", {
         duration: 2,
         delay: 4,
-        text: "no es esta serpiente."
+        text: "no es una serpiente."
     })
 
     gsap.to("#typewrite", {
         duration: 2,
         delay: 8,
-        text: "no habla Francés."
+        text: "no habla francés."
     })
 
     gsap.to("#typewrite", {

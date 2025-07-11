@@ -3,7 +3,7 @@ const exploreButton = document.getElementById("explore");
 const view = document.getElementById("start");
 
 exploreButton.addEventListener("click", () => {
-    scrollTo({ top: view.offsetTop - 100, behavior: "smooth" });
+    scrollTo({ top: view.offsetTop - 70, behavior: "smooth" });
 })
 
 // PROJECTS BUTTON

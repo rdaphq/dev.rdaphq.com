@@ -44,18 +44,20 @@ $dg: #ffffff30;
 }
 
 .alert {
-    user-select: none;
-    position: fixed;
     bottom: 3rem;
     left: 50%;
     color: #000;
-    font-size: 0.9rem;
+    position: fixed;
+    font-size: 0.8rem;
+    font-weight: 500;
+    user-select: none;
     padding: 0.8rem 2rem;
     border-radius: 0.5rem;
     background-color: #fff;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(0%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3137254902);
-    display: none;
+    opacity: 1;
+    display: block;
     z-index: 100;
 
     &-slide {
@@ -108,7 +110,7 @@ $dg: #ffffff30;
 }
 
 html {
-    will-change: transform, opacity;
+    will-change: transform opacity;
     scroll-behavior: smooth;
     overflow-x: hidden;
     cursor: crosshair;
@@ -117,14 +119,12 @@ html {
 body {
     color: $wh;
     width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
     font-family: $geist;
     background-color: $bg;
-    overflow-x: hidden;
-    min-width: 320px;
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-tap-highlight-color: transparent;
-    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
 
     h2 {
         padding: .5rem;
@@ -163,21 +163,21 @@ body {
     }
 }
 
+.section-title {
+    font-family: $inter;
+    font-weight: 600;
+    color: transparent;
+    background: #fafafa;
+    background: linear-gradient(180deg, #fafafa 50%, #ff6363 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
 .container {
     width: 100%;
     min-height: 100vh;
-    padding: 0 1.5rem;
+    padding: 0 1.2rem;
     margin: 0 auto;
-
-    .section-title {
-        font-family: $inter;
-        font-weight: 600;
-        color: transparent;
-        background: #fafafa;
-        background: linear-gradient(180deg, #fafafa 50%, #ff6363 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-    }
 }
 
 .navbar {
@@ -249,9 +249,9 @@ body {
     &-bg-point {
         @include bgPoint;
 
-        filter: blur(80px);
-        bottom: 80px;
-        left: 70px;
+        filter: blur(100px);
+        bottom: 60px;
+        left: 42%;
 
         @media screen and (max-width: 40rem) {
             box-shadow: 0 0 5px 40px $pr;
@@ -275,16 +275,16 @@ body {
     
     &-item {
         gap: .5rem;
-        padding: 1.2rem;
-        display: flex;
-        min-width: 120px;
         width: 150px;
+        display: flex;
         height: 100px;
-        background-color: #ffffff09;
-        flex-direction: column;
-        border: 2px solid $dg;
-        border-radius: .8rem;
+        padding: 1.2rem;
+        min-width: 120px;
         overflow: hidden;
+        border-radius: .8rem;
+        border: 1px solid $dg;
+        flex-direction: column;
+        background-color: #ffffff08;
 
         transition: all .2s ease-in-out;
 
@@ -314,15 +314,29 @@ body {
     flex-direction: column;
     padding: 6rem 0;
 
-    &-container {
-        margin-top: 1.5rem;
-        align-items: stretch;
-        justify-content: center;
+    h2 {
+        padding: 0 2rem;
+    }
 
-        // lg = 1024px (64rem)
-        // @media screen and (max-width: 64rem) {
-        //     justify-content: center;
-        // }
+    &-container {
+        padding: 1rem;
+        margin-top: 1.5rem;
+        scrollbar-width: none;
+
+        @media (width > 1024px) {
+
+            &::-webkit-scrollbar {
+                width: 10px;
+
+                &-track {
+                    background-color: #ffffff05;
+                }
+
+                &-thumb {
+                    background-color: #ffffff10;
+                }
+            }
+        }
     }
 
     &-bg-point {
@@ -337,19 +351,31 @@ body {
     display: flex;
     min-width: 300px;
     max-width: 320px;
+    user-select: none;
+    position: relative;
     border-radius: 1.5rem;
     flex-direction: column;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff08;
     justify-content: space-between;
     box-shadow: 0 0 20px #00000020;
-    backdrop-filter: blur(10px);
-    background: linear-gradient(160deg, transparent 50%, #ffffff10 100%);
-    position: relative;
+    & {
+        background: 
+        linear-gradient(
+            160deg,
+            #000 30%,
+            #ffffff08 100%
+        );
+    }
 
 
     &-tag {
-        font-size: .7rem;
-        padding: .5rem;
         z-index: 5;
+        top: -.4rem;
+        right: -.5rem;
+        font-size: .7rem;
+        border-radius: .2rem;
+        padding: .3rem .5rem;
     }
     
     &-data {

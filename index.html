@@ -90,18 +90,18 @@
 
     <div class="container max-w-[1200px]">
         <main>
-            <section class="hero min-h-[90dvh] md:min-h-132 flex flex-col items-center justify-center gap-20 md:gap-8 md:flex-row md:text-left">
+            <section class="hero min-h-[80dvh] sm:min-h-[90dvh] md:min-h-132 flex flex-col items-center justify-center gap-20 md:gap-8 md:flex-row md:text-left">
                 <div class="hero-bg-point slideView"></div>
 
-                <div class="hero-text slideView text-center md:text-left">
+                <div class="hero-text slideView text-center">
                     <p class="text-[.6rem] relative bottom-[1rem] uppercase text-gray-300 sm:text-gray-400">Just look at this website.</p>
                     <h1 class="text-white text-5xl tracking-tighter text-balance font-bold lg:text-7xl xl:text-8xl">
                     <span class="text-red-500 text-shadow-sm/10 text-shadow-black">Rdap</span><br><span id="typewrite"></span>
                     </h1>
-                    <a id="explore" class="explore text-center text-red-500 relative left-[50%] md:left-0 top-[1rem] -translate-x-[50%] md:-translate-x-0 hover:text-white" href="javascript:void()">Explore <span>---></span></a>
+                    <a id="explore" class="explore text-center text-red-500 relative left-[50%] top-[1rem] -translate-x-[50%] hover:text-white" href="javascript:void()">Explore <span>---></span></a>
                 </div>
 
-                <div class="hero-image slideView">
+                <div class="hero-image slideView hidden">
                     <img src="assets/rdapsnake.png" alt="Rdap Snake">
                 </div>
             </section>
@@ -166,107 +166,111 @@
                     </div>
                 </div>
             </section>
+        </main>
+    </div>
 
-            <section class="projects">
-                <h2 id="projects" class="slideView text-white text-5xl text-center tracking-tighter section-title">Projects & Works</h2>
+    <section class="projects">
+        <h2 id="projects" class="slideView text-white text-5xl text-center tracking-tighter section-title">Projects & Works</h2>
 
-                <div class="projects-bg-point"></div>
+        <div class="projects-bg-point"></div>
 
-                <div class="projects-container flex gap-6 items-center justify-center flex-wrap slideView">
-                    <div class="project">
-                        <div class="project-image">
-                            <a target="_blank" href="https://hexa.rdaphq.com"><img src="assets/hexa.png" alt="Hexa"></a>
-                        </div>
-                        <div class="project-data">
-                            <div class="data-container">
-                                <h3 class="text-white text-2xl tracking-tighter">Hexa</h3>
-                                <p class="text-gray-400">A powerful multipurpose bot for Discord using discord.js. Now with Dashboard.</p>
-                            </div>
-                        </div>
-                        <div class="project-go">
-                            <a target="_blank" href="https://hexa.rdaphq.com" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <span class="project-tag absolute -top-2 -right-4 rounded-md rotate-6 text-black bg-yellow-500 font-bold">NOT AVAILABLE</span>
-                        <div class="project-image">
-                            <a id="quikie" href="javascript:void()"><img src="assets/quikie.png" alt="Quikie CSS"></a>
-                        </div>
-                        <div class="project-data">
-                            <div class="data-container">
-                                <h3 class="text-white text-2xl tracking-tighter">Quikie</h3>
-                                <p class="text-gray-400">A library to create landing pages easily using native HTML and CSS.</p>
-                            </div>
-                        </div>
-                        <div class="project-go">
-                            <!-- <a id="quikie_view" href="javascript:void()" class="view-project text-red-500 hover:text-white">View <span>--></span></a> -->
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <div class="project-image">
-                            <a target="_blank" href="https://open-vsx.org/extension/rdaphq/rdaphq-traecord"><img src="assets/traecord.png" alt="Traecord"></a>
-                        </div>
-                        <div class="project-data">
-                            <div class="data-container">
-                                <h3 class="text-white text-2xl tracking-tighter">Traecord</h3>
-                                <p class="text-gray-400">A VSCode extension (for Trae) to display your coding activity in your Discord status.</p>
-                            </div>
-                        </div>
-                        <div class="project-go">
-                            <a target="_blank" href="https://open-vsx.org/extension/rdaphq/rdaphq-traecord" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <div class="project-image">
-                            <a target="_blank" href="https://github.com/rdaphq/ezmodals"><img src="assets/ezmodals.png" alt="EzModals"></a>
-                        </div>
-                        <div class="project-data">
-                            <div class="data-container">
-                                <h3 class="text-white text-2xl tracking-tighter">EzModals</h3>
-                                <p class="text-gray-400">A library to add pre-built modals with HTML classes only.</p>
-                            </div>
-                        </div>
-                        <div class="project-go">
-                            <a target="_blank" href="https://github.com/rdaphq/ezmodals" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <div class="project-image">
-                            <a target="_blank" href="https://yamaha.rdaphq.com"><img src="assets/yamaha-landing.png" alt="Yamaha Modern Page by Rdap"></a>
-                        </div>
-                        <div class="project-data">
-                            <div class="data-container">
-                                <h3 class="text-white text-2xl tracking-tighter">MT-09</h3>
-                                <p class="text-gray-400">A landing page to present the new Yamaha MT-09 in a modern way.</p>
-                            </div>
-                        </div>
-                        <div class="project-go">
-                            <a target="_blank" href="https://yamaha.rdaphq.com" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <span class="project-tag absolute -top-2 -right-4 rounded-md rotate-6 text-black bg-teal-300 font-bold">HIRED PROJECT</span>
-                        <div class="project-image">
-                            <a target="_blank" href="https://seleniaparra.com"><img src="assets/selenia-page.png" alt="Yamaha Modern Page by Rdap"></a>
-                        </div>
-                        <div class="project-data">
-                            <div class="data-container">
-                                <h3 class="text-white text-2xl tracking-tighter">Selenia Parra</h3>
-                                <p class="text-gray-400">The Selenia's website, developed using WordPress and PHP.</p>
-                            </div>
-                        </div>
-                        <div class="project-go">
-                            <a target="_blank" href="https://seleniaparra.com" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
-                        </div>
+        <div class="projects-container flex gap-4 lg:gap-6 items-stretch justify-start lg:justify-center lg:flex-wrap slideView overflow-x-scroll lg:overflow-hidden snap-proximity snap-x">
+            <div class="project snap-center">
+                <div class="project-image">
+                    <a target="_blank" href="https://hexa.rdaphq.com"><img src="assets/hexa.png" alt="Hexa"></a>
+                </div>
+                <div class="project-data">
+                    <div class="data-container">
+                        <h3 class="text-white text-2xl tracking-tighter">Hexa</h3>
+                        <p class="text-gray-400">A powerful multipurpose bot for Discord using discord.js. Now with Dashboard.</p>
                     </div>
                 </div>
-            </section>
+                <div class="project-go">
+                    <a target="_blank" href="https://hexa.rdaphq.com" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                </div>
+            </div>
 
+            <div class="project snap-center">
+                <div class="project-image">
+                    <a target="_blank" href="https://open-vsx.org/extension/rdaphq/rdaphq-traecord"><img src="assets/traecord.png" alt="Traecord"></a>
+                </div>
+                <div class="project-data">
+                    <div class="data-container">
+                        <h3 class="text-white text-2xl tracking-tighter">Traecord</h3>
+                        <p class="text-gray-400">A VSCode extension (for Trae) to display your coding activity in your Discord status.</p>
+                    </div>
+                </div>
+                <div class="project-go">
+                    <a target="_blank" href="https://open-vsx.org/extension/rdaphq/rdaphq-traecord" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                </div>
+            </div>
+
+            <div class="project snap-center">
+                <div class="project-image">
+                    <a target="_blank" href="https://github.com/rdaphq/ezmodals"><img src="assets/ezmodals.png" alt="EzModals"></a>
+                </div>
+                <div class="project-data">
+                    <div class="data-container">
+                        <h3 class="text-white text-2xl tracking-tighter">EzModals</h3>
+                        <p class="text-gray-400">A library to add pre-built modals with HTML classes only.</p>
+                    </div>
+                </div>
+                <div class="project-go">
+                    <a target="_blank" href="https://github.com/rdaphq/ezmodals" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                </div>
+            </div>
+
+            <div class="project snap-center">
+                <div class="project-image">
+                    <a target="_blank" href="https://yamaha.rdaphq.com"><img src="assets/yamaha-landing.png" alt="Yamaha Modern Page by Rdap"></a>
+                </div>
+                <div class="project-data">
+                    <div class="data-container">
+                        <h3 class="text-white text-2xl tracking-tighter">MT-09</h3>
+                        <p class="text-gray-400">A landing page to present the new Yamaha MT-09 in a modern way.</p>
+                    </div>
+                </div>
+                <div class="project-go">
+                    <a target="_blank" href="https://yamaha.rdaphq.com" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                </div>
+            </div>
+
+            <div class="project snap-center">
+                <span class="project-tag absolute rotate-6 text-black bg-teal-300 font-bold">HIRED PROJECT</span>
+                <div class="project-image">
+                    <a target="_blank" href="https://seleniaparra.com"><img src="assets/selenia-page.png" alt="Yamaha Modern Page by Rdap"></a>
+                </div>
+                <div class="project-data">
+                    <div class="data-container">
+                        <h3 class="text-white text-2xl tracking-tighter">Selenia Parra</h3>
+                        <p class="text-gray-400">The Selenia's website, developed using WordPress and PHP.</p>
+                    </div>
+                </div>
+                <div class="project-go">
+                    <a target="_blank" href="https://seleniaparra.com" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                </div>
+            </div>
+
+            <div class="project snap-center">
+                <span class="project-tag absolute rotate-6 text-black bg-yellow-500 font-bold">NOT AVAILABLE</span>
+                <div class="project-image">
+                    <a id="quikie" href="javascript:void()"><img src="assets/quikie.png" alt="Quikie CSS"></a>
+                </div>
+                <div class="project-data">
+                    <div class="data-container">
+                        <h3 class="text-white text-2xl tracking-tighter">Quikie</h3>
+                        <p class="text-gray-400">A library to create landing pages easily using native HTML and CSS.</p>
+                    </div>
+                </div>
+                <div class="project-go">
+                    <a id="quikie_view" href="javascript:void()" class="view-project text-red-500 hover:text-white">View <span>--></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container max-w-[1200px]">
+        <main>
             <section class="experience flex flex-col items-center justify-center gap-5">
                 <h2 id="projects" class="slideView text-white text-5xl text-center tracking-tighter section-title">Work Experience</h2>
 
@@ -275,32 +279,40 @@
                         <div class="experience-item">
                             <div class="experience-item-data flex flex-col items-start justify-start gap-2">
                                 <span class="text-1xl text-gray-300">Nov 2024 - Now</span>
-                                <h3 class="text-white font-bold text-2xl tracking-tighter">Developer</h3>
-                                <p class="text-gray-400">Currently working as a main developer at <a href="javascript:void()" class="text-red-500 hover:text-white">Fénixpuntonet</a>, maintaining Shopify stores and projects, PHP websites, optimizing websites SEO, redesigning old wesites and creating modern landing pages from scratch.</p>
+                                <div>
+                                    <h3 class="text-white font-bold text-2xl tracking-tighter">Developer</h3>
+                                    <p class="text-gray-400">Currently working as a main developer at <a href="javascript:void()" class="text-red-500 hover:text-white">Fénixpuntonet</a>, maintaining Shopify stores and projects, PHP websites, optimizing websites SEO, redesigning old wesites and creating modern landing pages from scratch.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="experience-item">
                             <div class="experience-item-data flex flex-col items-start justify-start gap-2">
                                 <span class="text-1xl text-gray-300">Jan 2023 - Jun 2025</span>
-                                <h3 class="text-white font-bold text-2xl tracking-tighter">WordPress Developer</h3>
-                                <p class="text-gray-400">I designed and developed a custom website and e-commerce for <a href="https://seleniaparra.com" class="text-red-500 hover:text-white">Selenia Parra</a>, a professional lawyer from Colombia. Her website includes her professional web portfolio, custom plugins, and the e-commerce side where she's able to sell her courses.</p>
+                                <div>
+                                    <h3 class="text-white font-bold text-2xl tracking-tighter">WordPress Developer</h3>
+                                    <p class="text-gray-400">I designed and developed a custom website and e-commerce for <a href="https://seleniaparra.com" class="text-red-500 hover:text-white">Selenia Parra</a>, a professional lawyer from Colombia. Her website includes her professional web portfolio, custom plugins, and the e-commerce side where she's able to sell her courses.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="experience-item">
                             <div class="experience-item-data flex flex-col items-start justify-start gap-2">
                                 <span class="text-1xl text-gray-300">Ago 2020 - Mar 2022</span>
-                                <h3 class="text-white font-bold text-2xl tracking-tighter">Web Developer</h3>
-                                <p class="text-gray-400">I designed and developed the website for <a href="https://instagram.com/antoja2food" class="text-red-500 hover:text-white">Antoja2</a>, a restaurant in Copacabana, Colombia. The website included a table-booking feature and the complete restaurant menu. Restaurant it's closed now.</p>
+                                <div>
+                                    <h3 class="text-white font-bold text-2xl tracking-tighter">Web Developer</h3>
+                                    <p class="text-gray-400">I designed and developed the website for <a href="https://instagram.com/antoja2food" class="text-red-500 hover:text-white">Antoja2</a>, a restaurant in Copacabana, Colombia. The website included a table-booking feature and the complete restaurant menu. Restaurant it's closed now.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="experience-item">
                             <div class="experience-item-data flex flex-col items-start justify-start gap-2">
                                 <span class="text-1xl text-gray-300">May 2019 - Now <span class="text-sm text-gray-500">(remote)</span></span>
-                                <h3 class="text-white font-bold text-2xl tracking-tighter">Bots/Apps Developer</h3>
-                                <p class="text-gray-400">Since 2019, I'm a bot developer on <a href="https://discord.com" class="text-red-500 hover:text-white">Discord</a>. I'm maintaining my big project <a class="text-red-500 hover:text-white" href="https://hexa.rdaphq.com">Hexa</a>, the Monster Energy bot and also Pringles, a discontinued bot for lack-of-time reasons.</p>
+                                <div>
+                                    <h3 class="text-white font-bold text-2xl tracking-tighter">Bots/Apps Developer</h3>
+                                    <p class="text-gray-400">Since 2019, I'm a bot developer on <a href="https://discord.com" class="text-red-500 hover:text-white">Discord</a>. I'm maintaining my big project <a class="text-red-500 hover:text-white" href="https://hexa.rdaphq.com">Hexa</a>, the Monster Energy bot and also Pringles, a discontinued bot for lack-of-time reasons.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -324,7 +336,6 @@
     <footer class="footer flex flex-col justify-center items-center md:flex-row md:justify-between text-center md:text-left bg-[#00000060] backdrop-blur-sm border-t border-[#ffffff20]">
         <div class="footer-content flex flex-col items-center justify-center gap-1 text-[.7rem] md:items-start">
             <p class="copyright text-gray-400" id="copyright"></p>
-            <p class="text-gray-500">This website does not collect any data, it's a static portfolio.</p>
             <p class="text-gray-500">This website is a portfolio designed and developed to show my projects to clients and third-parties.</p>
         </div>
 
