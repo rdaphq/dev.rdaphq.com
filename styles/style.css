@@ -139,7 +139,7 @@ body h2 {
   position: relative;
 }
 .translate img {
-  width: 22px;
+  width: 1.2rem;
 }
 
 .splash {
@@ -148,7 +148,7 @@ body h2 {
   z-index: 900;
 }
 .splash img {
-  width: 80px;
+  width: 44px;
 }
 
 .container {
@@ -356,6 +356,9 @@ body h2 {
 .project-go a:hover {
   gap: 2rem;
 }
+.project:hover .project-image img {
+  scale: 1.15;
+}
 .project-image {
   width: 100%;
   height: 220px;
@@ -367,7 +370,7 @@ body h2 {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: relative;
   top: -40px;
 }
@@ -426,10 +429,6 @@ body h2 {
 }
 .footer a:hover, .footer i:hover {
   color: #eee;
-}
-
-@view-transition {
-  navigation: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

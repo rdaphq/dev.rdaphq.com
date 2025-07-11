@@ -23,12 +23,10 @@ socialsButton.addEventListener("click", () => {
 })
 
 // COPYRIGHT
-document.addEventListener("DOMContentLoaded", () => {
-    const year = new Date().getFullYear();
+const year = new Date().getFullYear();
 
-    const copyright = document.getElementById("copyright");
-    const copyright_es = document.getElementById("es");
+const copyright = document.getElementById("copyright");
+copyright.innerHTML = `&copy; ${year} Rdap. Almost all rights reserved.`;
 
-    copyright.innerHTML = `&copy; ${year} Rdap. Almost all rights reserved.`;
-    copyright_es.innerHTML = `&copy; ${year} Rdap. Casi todos los derechos reservados.`;
-})
+// const copyrightEs = document.getElementById("copy_es");
+// copyrightEs.innerHTML = `&copy; ${year} Rdap. Casi todos los derechos reservados.`;
